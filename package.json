@@ -1,0 +1,23 @@
+{
+    "name": "dsmcode-ui",
+    "version": "1.0.0",
+    "dependencies": {
+        "coffee-script": "*",
+        "django-ember-precompile": "*",
+        "bower": "*",
+        "grunt-cli": "*",
+        "grunt-contrib-connect": "*",
+        "grunt-contrib-coffee": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-combine": "*"
+    },
+    "devDependencies": {
+        "http-server": "*",
+        "karma": "0.9.5",
+        "karma-phantomjs-launcher": "*",
+        "karma-chrome-launcher": "*",
+        "karma-coffee-preprocessor": "*",
+        "karma-qunit": "*",
+        "karma-ember-preprocessor": "*"
+    }
+}
