@@ -7,9 +7,7 @@
         "bower": "*",
         "grunt-cli": "*",
         "grunt-contrib-connect": "*",
-        "grunt-contrib-coffee": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-combine": "*"
+        "grunt-contrib-concat": "*"
     },
     "devDependencies": {
         "http-server": "*",

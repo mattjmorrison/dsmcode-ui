@@ -1,0 +1,8 @@
+# Environment Setup
+
+`npm install`
+`bower install`
+
+# Running
+
+`grunt local`
