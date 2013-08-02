@@ -3,21 +3,24 @@
     "version": "1.0.0",
     "dependencies": {
         "coffee-script": "*",
-        "django-ember-precompile": "*",
-        "bower": "*",
+        "bower": "~1.2.3",
         "grunt-cli": "*",
         "grunt-contrib-connect": "*",
+        "grunt-contrib-concat": "*",
         "grunt-contrib-coffee": "*",
-        "grunt-contrib-watch": "*",
-        "grunt-combine": "*"
+        "grunt-ember-template-compiler": "1.0.6"
     },
     "devDependencies": {
-        "http-server": "*",
-        "karma": "0.9.5",
+        "grunt-coffeelint": "*",
+        "grunt-karma-coveralls": "~0.0.2",
+        "grunt-karma": "0.7.0",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
-        "karma-coffee-preprocessor": "*",
         "karma-qunit": "*",
-        "karma-ember-preprocessor": "*"
+        "karma-coverage": "*"
+    },
+    "scripts": {
+        "postinstall": "bower install",
+        "test": "grunt travis"
     }
 }

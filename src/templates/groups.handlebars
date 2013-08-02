@@ -1,0 +1,9 @@
+<h2>Groups</h2>
+
+<ul class="groups">
+  {{#each group in controller}}
+    <li>{{ group.name }}</li>
+  {{/each}}
+</ul>
+
+{{ outlet }}

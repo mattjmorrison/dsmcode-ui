@@ -2,8 +2,8 @@
   "name": "dsmcode-ui",
   "version": "1.0.0",
   "dependencies": {
-    "ember": "1.0.0-rc.5",
-    "ember-data-shim": "*",
+    "handlebars": "~1.0.0",
+    "ember": "1.0.0-rc.7",
     "jquery-mockjax": "*"
   }
 }
