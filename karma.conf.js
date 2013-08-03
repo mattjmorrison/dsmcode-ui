@@ -3,7 +3,10 @@ module.exports = function(config) {
     basePath: '.',
     frameworks: ['qunit'],
     files: [
-        "lib/*.js",
+        "src/lib/*.js",
+        "bower_components/jquery-mockjax/jquery.mockjax.js",
+        "src/*coffee",
+        "src/templates/*handlebars",
         "tests/*coffee"
     ],
     reporters: ['progress'],
@@ -19,10 +22,12 @@ module.exports = function(config) {
         'karma-qunit',
         'karma-chrome-launcher',
         'karma-phantomjs-launcher',
-        'karma-coffee-preprocessor'
+        'karma-coffee-preprocessor',
+        'karma-ember-preprocessor'
     ],
     preprocessors: {
-        "**/*.coffee": 'coffee'
+        "**/*.coffee": 'coffee',
+        "**/*.handlebars": 'ember'
     }
   });
 };
