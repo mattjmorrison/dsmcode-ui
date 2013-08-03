@@ -3,6 +3,7 @@ module.exports = function(config) {
     basePath: '.',
     frameworks: ['qunit'],
     files: [
+        "lib/*.js",
         "tests/*coffee"
     ],
     reporters: ['progress'],

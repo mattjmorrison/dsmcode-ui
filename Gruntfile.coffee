@@ -22,3 +22,4 @@ module.exports = (grunt) ->
         dest: 'lib/app.min.js'
 
   grunt.task.registerTask 'local', ['concat', 'connect']
+  grunt.task.registerTask 'test', ['concat', 'karma']
