@@ -6,3 +6,8 @@
 # Running
 
 `grunt local`
+
+
+# Notes:
+
+grunt-karma needs to depend on karma >= 0.9.7

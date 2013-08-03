@@ -10,8 +10,8 @@
         "grunt-contrib-concat": "*"
     },
     "devDependencies": {
+        "grunt-karma": "*",
         "http-server": "*",
-        "karma": "0.9.5",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
         "karma-coffee-preprocessor": "*",

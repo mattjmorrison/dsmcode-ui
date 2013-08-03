@@ -1,7 +1,11 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-karma'
   grunt.initConfig
+    karma:
+      unit:
+        configFile: 'karma.conf.js'
     connect:
       server:
         options:
@@ -12,7 +16,7 @@ module.exports = (grunt) ->
       dist:
         src: [
           'bower_components/jquery/jquery.min.js'
-          'bower_components/handlebars/handlebar.js'
+          'bower_components/handlebars/handlebars.js'
           'bower_components/ember/ember.min.js'
         ]
         dest: 'lib/app.min.js'
