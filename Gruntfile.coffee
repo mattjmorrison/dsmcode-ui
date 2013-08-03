@@ -19,7 +19,7 @@ module.exports = (grunt) ->
           'bower_components/handlebars/handlebars.js'
           'bower_components/ember/ember.min.js'
         ]
-        dest: 'lib/app.min.js'
+        dest: 'src/lib/app.min.js'
 
   grunt.task.registerTask 'local', ['concat', 'connect']
   grunt.task.registerTask 'test', ['concat', 'karma']
