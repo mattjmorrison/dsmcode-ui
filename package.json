@@ -12,7 +12,7 @@
         "grunt-ember-template-compiler": "1.0.4"
     },
     "devDependencies": {
-        "grunt-karma": "*",
+        "grunt-karma": "~0.5.0",
         "http-server": "*",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
