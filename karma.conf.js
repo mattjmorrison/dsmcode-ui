@@ -13,13 +13,14 @@ module.exports = function(config) {
     runnerPort: 9100,
     colors: true,
     logLevel: config.LOG_INFO,
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     captureTimeout: 60000,
     singleRun: true,
     autoWatch: false,
     plugins: [
         'karma-qunit',
-        'karma-chrome-launcher'
+        'karma-chrome-launcher',
+        'karma-phantomjs-launcher'
     ]
   });
 };
