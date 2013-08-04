@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "dependencies": {
     "ember": "1.0.0-rc.5",
-    "ember-data-shim": "*",
     "jquery-mockjax": "*"
   }
 }
