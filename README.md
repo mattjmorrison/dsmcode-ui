@@ -2,14 +2,12 @@
 
 # Environment Setup
 
-`npm install`
-`bower install`
+    npm install
+    
+# Running Tests
+
+    grunt test
 
 # Running
 
-`grunt local`
-
-
-# Notes:
-
-grunt-karma needs to depend on karma >= 0.9.7
+    grunt local
