@@ -52,3 +52,4 @@ module.exports = (grunt) ->
   grunt.task.registerTask 'buildtest', ['concat:test', 'coffee', 'emberhandlebars']
   grunt.task.registerTask 'local', ['builddist', 'connect']
   grunt.task.registerTask 'test', ['buildtest', 'karma']
+  grunt.task.registerTask 'travis', ['test']

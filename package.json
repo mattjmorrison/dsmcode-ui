@@ -19,6 +19,7 @@
         "karma-qunit": "*"
     },
     "scripts": {
-        "postinstall": "bower install"
+        "postinstall": "bower install",
+        "test": "grunt travis"
     }
 }
