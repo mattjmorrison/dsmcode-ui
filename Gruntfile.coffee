@@ -25,7 +25,8 @@ module.exports = (grunt) ->
       compile:
         options:
           templateName: (sourceFile) ->
-            sourceFile.replace 'src/templates/', ''
+            newSource = sourceFile.replace 'src/templates/', ''
+            newSource.replace '.handlebars', ''
         files: [
           'src/templates/*.handlebars'
         ]
@@ -46,9 +47,7 @@ module.exports = (grunt) ->
         ]
         dest: 'src/lib/deps.min.js'
 
-
   grunt.task.registerTask 'emberhandlebars', 'Compile ember templates', ->
-
     glob = require 'glob'
     fs = require 'fs'
     mkdirp = require 'mkdirp'
