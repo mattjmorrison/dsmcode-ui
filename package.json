@@ -7,15 +7,20 @@
         "bower": "*",
         "grunt-cli": "*",
         "grunt-contrib-connect": "*",
-        "grunt-contrib-concat": "*"
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-coffee": "*",
+        "ember-template-compiler": "*",
+        "glob": "*",
+        "mkdirp": "*"
     },
     "devDependencies": {
         "grunt-karma": "*",
         "http-server": "*",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
-        "karma-coffee-preprocessor": "*",
-        "karma-qunit": "*",
-        "karma-ember-preprocessor": "*"
+        "karma-qunit": "*"
+    },
+    "scripts": {
+        "postinstall": "bower install"
     }
 }

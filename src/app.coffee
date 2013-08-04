@@ -1,4 +1,5 @@
-DSMCode = Ember.Application.create()
+DSMCode = Ember.Application.create
+  rootElement: '#ember-app'
 
 DSMCode.Router.map ->
   @resource "application",
