@@ -2,20 +2,19 @@ DSMCode = Ember.Application.create
   rootElement: '#ember-app'
 
 DSMCode.Store = DS.Store.extend
-  revision: 12
-  adapter: 'DS.fixtureAdapter'
+  adapter: 'DS.FixtureAdapter'
 
-DS.RESTAdapter.reopen
-  url: '/'
+DSMCode.Router.map (match) ->
+  @resource "group",
+    path: '/'
 
-DSMCode.ApplicationRoute = Ember.Route.extend
-  setupController: (controller, model) ->
+DSMCode.GroupRoute = Ember.Route.extend
+  model: (params) ->
     console.log DSMCode.Group.all()
-    controller.set 'groups', DSMCode.Group.all()
+    DSMCode.Group.all()
 
-DSMCode.Router.map ->
-  @resource "application",
-    path: "/"
+DSMCode.GroupController = Ember.ArrayController.extend
+  content: []
 
 DSMCode.Group = DS.Model.extend
   name: DS.attr 'string'

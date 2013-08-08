@@ -1,0 +1,13 @@
+{{ controller }}
+
+<ul class="groups">
+
+  {{#each item in controller.groups }}
+    {{ item }}
+  {{/each}}
+
+  {{#each group in groups}}
+    <li>{{ group }}</li>
+  {{/each}}
+
+</ul>
