@@ -4,20 +4,16 @@ DSMCode = Ember.Application.create
 DSMCode.Store = DS.Store.extend
   adapter: 'DS.FixtureAdapter'
 
-DSMCode.Router.map (match) ->
-  @resource "group",
+DSMCode.Router.map ->
+  @resource "groups",
     path: '/'
-
-DSMCode.GroupRoute = Ember.Route.extend
-  model: (params) ->
-    console.log DSMCode.Group.all()
-    DSMCode.Group.all()
-
-DSMCode.GroupController = Ember.ArrayController.extend
-  content: []
 
 DSMCode.Group = DS.Model.extend
   name: DS.attr 'string'
+
+DSMCode.GroupsRoute = Ember.Route.extend
+  model: ->
+    DSMCode.Group.find()
 
 DSMCode.Group.FIXTURES = [
   {id: 1, name: "Group One"}

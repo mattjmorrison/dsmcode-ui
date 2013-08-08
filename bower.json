@@ -2,7 +2,7 @@
   "name": "dsmcode-ui",
   "version": "1.0.0",
   "dependencies": {
-    "ember": "1.0.0-rc.5",
+    "ember": "1.0.0-rc.6",
     "ember-data": "*",
     "jquery-mockjax": "*"
   }

@@ -1,13 +1,7 @@
-{{ controller }}
-
 <ul class="groups">
 
-  {{#each item in controller.groups }}
-    {{ item }}
-  {{/each}}
-
-  {{#each group in groups}}
-    <li>{{ group }}</li>
+  {{#each group in controller}}
+  <li>{{ group.name }}</li>
   {{/each}}
 
 </ul>
