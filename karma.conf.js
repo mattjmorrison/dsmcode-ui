@@ -8,7 +8,7 @@ module.exports = function(config) {
         "src/lib/tmpl.min.js",
         "src/lib/tests.min.js"
     ],
-    reporters: ['progress'],
+    reporters: ['coverage', 'progress'],
     port: 9876,
     runnerPort: 9100,
     colors: true,
@@ -17,8 +17,16 @@ module.exports = function(config) {
     captureTimeout: 60000,
     singleRun: true,
     autoWatch: false,
+    preprocessors: {
+        "**/lib/app.min.js": "coverage"
+    },
+    coverageReporter: {
+        type: "lcov",
+        dir: "coverage/"
+    },
     plugins: [
         'karma-qunit',
+        'karma-coverage',
         'karma-chrome-launcher',
         'karma-phantomjs-launcher'
     ]
