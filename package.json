@@ -23,6 +23,6 @@
     "scripts": {
         "postinstall": "bower install",
         "test": "grunt travis",
-        "coveralls": "cat coverage/Phan*/lcov.info | COVERALLS_SERVICE_NAME='travis-ci' COVERALLS_REPO_TOKEN='dkh51YHpiC1gRPUb8KSUg5jJOSX7A7Kna' coveralls.js"
+        "coveralls": "cat coverage/Phan*/lcov.info | COVERALLS_SERVICE_NAME='travis-ci' COVERALLS_REPO_TOKEN='dkh51YHpiC1gRPUb8KSUg5jJOSX7A7Kna' node_modules/coveralls/bin/coveralls.js"
     }
 }
