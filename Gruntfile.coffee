@@ -1,4 +1,5 @@
 module.exports = (grunt) ->
+  grunt.loadNpmTasks 'grunt-coffeelint'
   grunt.loadNpmTasks 'grunt-contrib-connect'
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
@@ -13,8 +14,10 @@ module.exports = (grunt) ->
     coveralls:
       options:
         repo_token: 'dkh51YHpiC1gRPUb8KSUg5jJOSX7A7Kna'
-        service_name: 'test'
+        service_name: 'testing'
         coverage_dir: 'coverage'
+    coffeelint:
+      app: ['src/*.coffee']
     connect:
       server:
         options:
@@ -61,4 +64,4 @@ module.exports = (grunt) ->
   grunt.task.registerTask 'buildtest', ['concat:test', 'coffee', 'emberhandlebars']
   grunt.task.registerTask 'local', ['builddist', 'connect']
   grunt.task.registerTask 'test', ['buildtest', 'karma']
-  grunt.task.registerTask 'travis', ['test', 'coveralls']
+  grunt.task.registerTask 'travis', ['test', 'coffeelint', 'coveralls']
