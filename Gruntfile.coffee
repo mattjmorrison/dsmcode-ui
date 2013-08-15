@@ -40,9 +40,8 @@ module.exports = (grunt) ->
           'src/templates/*.handlebars'
         ]
         dest: 'src/lib/tmpl.min.js'
-    coffeelint: {
+    coffeelint:
       app: ["src/*.coffee"]
-    },
     concat:
       dist:
         src: [
