@@ -3,12 +3,18 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-ember-template-compiler'
+  grunt.loadNpmTasks 'grunt-karma-coveralls'
   grunt.loadNpmTasks 'grunt-karma'
 
   grunt.initConfig
     karma:
       unit:
         configFile: 'karma.conf.js'
+    coveralls:
+      options:
+        repo_token: 'dkh51YHpiC1gRPUb8KSUg5jJOSX7A7Kna'
+        service_name: 'test'
+        coverage_dir: 'coverage'
     connect:
       server:
         options:
@@ -55,4 +61,4 @@ module.exports = (grunt) ->
   grunt.task.registerTask 'buildtest', ['concat:test', 'coffee', 'emberhandlebars']
   grunt.task.registerTask 'local', ['builddist', 'connect']
   grunt.task.registerTask 'test', ['buildtest', 'karma']
-  grunt.task.registerTask 'travis', ['test']
+  grunt.task.registerTask 'travis', ['test', 'coveralls']

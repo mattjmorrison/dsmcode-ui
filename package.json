@@ -13,8 +13,8 @@
     },
     "devDependencies": {
         "coffeelint": "*",
+        "grunt-karma-coveralls": "~0.0.2",
         "grunt-karma": "0.7.0",
-        "coveralls": "*",
         "http-server": "*",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
