@@ -3,7 +3,6 @@
     "version": "1.0.0",
     "dependencies": {
         "coffee-script": "*",
-        "django-ember-precompile": "*",
         "bower": "1.1.2",
         "grunt-cli": "*",
         "grunt-contrib-connect": "*",
@@ -15,7 +14,6 @@
         "grunt-coffeelint": "*",
         "grunt-karma-coveralls": "~0.0.2",
         "grunt-karma": "0.7.0",
-        "http-server": "*",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
         "karma-qunit": "*",

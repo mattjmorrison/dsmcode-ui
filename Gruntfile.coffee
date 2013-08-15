@@ -6,6 +6,7 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-ember-template-compiler'
   grunt.loadNpmTasks 'grunt-karma-coveralls'
   grunt.loadNpmTasks 'grunt-karma'
+  grunt.loadNpmTasks 'grunt-coffeelint'
 
   grunt.initConfig
     karma:
@@ -16,8 +17,6 @@ module.exports = (grunt) ->
         repo_token: 'dkh51YHpiC1gRPUb8KSUg5jJOSX7A7Kna'
         service_name: 'travis-ci'
         coverage_dir: 'coverage'
-    coffeelint:
-      app: ['src/*.coffee']
     connect:
       server:
         options:
@@ -41,6 +40,9 @@ module.exports = (grunt) ->
           'src/templates/*.handlebars'
         ]
         dest: 'src/lib/tmpl.min.js'
+    coffeelint: {
+      app: ["src/*.coffee"]
+    },
     concat:
       dist:
         src: [
