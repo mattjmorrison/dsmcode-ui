@@ -14,7 +14,7 @@ module.exports = (grunt) ->
     coveralls:
       options:
         repo_token: 'dkh51YHpiC1gRPUb8KSUg5jJOSX7A7Kna'
-        service_name: 'testing'
+        service_name: 'travis-ci'
         coverage_dir: 'coverage'
     coffeelint:
       app: ['src/*.coffee']
