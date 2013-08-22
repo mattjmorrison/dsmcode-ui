@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "coffee-script": "*",
-        "bower": "1.1.2",
+        "bower": "1.2.2",
         "grunt-cli": "*",
         "grunt-contrib-connect": "*",
         "grunt-contrib-concat": "*",

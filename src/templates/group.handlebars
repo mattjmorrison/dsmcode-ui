@@ -1,0 +1,7 @@
+<h1>{{ controller.name }}</h1>
+
+<ul class="tweets">
+  {{#each tweet in controller.tweets }}
+  <li>{{ tweet.content }}</li>
+  {{/each}}
+</ul>
