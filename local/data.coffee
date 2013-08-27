@@ -1,18 +1,58 @@
+jQuery.mockjax
+  type: 'GET'
+  url: '/groups'
+  status: 200
+  dataType: 'json'
+  responseText:
+    groups: [
+      { id: 1, name: "Group One" }
+      { id: 2, name: "Group Two" }
+    ]
 
-DSMCode.Store = DS.Store.extend
-  adapter: 'DS.FixtureAdapter'
+jQuery.mockjax
+  type: 'GET'
+  url: '/groups/1'
+  status: 200
+  dataType: 'json'
+  responseText:
+    group:
+      id: 1
+      name: "Group One"
+      tweet_ids: [1, 2]
 
-DSMCode.Group.FIXTURES = [
-  {id: 1, name: "Group One", slug: 'one', tweets: [1, 2]}
-  {id: 2, name: "Group Two", slug: 'two', tweets: [3, 4]}
-  {id: 3, name: "Group Three", slug: 'three', tweets: [5, 6]}
-]
+jQuery.mockjax
+  type: 'GET'
+  url: '/groups/2'
+  status: 200
+  dataType: 'json'
+  responseText:
+    group:
+      id: 2
+      name: "Group Two"
+      tweet_ids: [3, 4]
 
-DSMCode.Tweet.FIXTURES = [
-  {id: 1, content: 'tweet one', group_id: 1}
-  {id: 2, content: 'tweet two', group_id: 1}
-  {id: 3, content: 'tweet three', group_id: 2}
-  {id: 4, content: 'tweet four', group_id: 2}
-  {id: 5, content: 'tweet five', group_id: 3}
-  {id: 6, content: 'tweet six', group_id: 3}
-]
+jQuery.mockjax
+  type: 'GET'
+  url:  '/tweets'
+  data:
+    ids: [1, 2]
+  status: 200
+  dataType: 'json'
+  responseText:
+    tweets: [
+      {id: 1, content: 'tweet one'}
+      {id: 2, content: 'tweet two'}
+    ]
+
+jQuery.mockjax
+  type: 'GET'
+  url:  '/tweets'
+  data:
+    ids: [3, 4]
+  status: 200
+  dataType: 'json'
+  responseText:
+    tweets: [
+      {id: 3, content: 'tweet three'}
+      {id: 4, content: 'tweet four'}
+    ]

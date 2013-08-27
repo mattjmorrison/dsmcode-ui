@@ -24,7 +24,8 @@ test "shows list of user groups", ->
       equal group_one, group.name, "'#{group_one}' != '#{group.name}'"
 
 test "shows correct title", ->
-  stub_ajax 'GET', '/groups', []
+  stub_ajax 'GET', '/groups',
+    groups: []
 
   Ember.run DSMCode, 'advanceReadiness'
 
@@ -34,24 +35,33 @@ test "shows correct title", ->
     value = find('.groups li:eq(0)').text()
     equal value, '', "Element should not have existed but was '#{value}'"
 
-# test "shows tweets on group details page", ->
+test "shows tweets on group details page", ->
 
-#   stub_ajax 'GET', '/groups',
-#     groups: [
-#       { id: 1, name: "Group One" }
-#       { id: 2, name: "Group Two" }
-#     ]
+  stub_ajax 'GET', '/groups',
+    groups: [
+      { id: 1, name: "Group One" }
+      { id: 2, name: "Group Two" }
+    ]
 
-#   expected =
-#     tweets: [
-#       { content: "tweet one", group_id: 1 }
-#       { content: "tweet two", group_id: 1 }
-#     ]
-#   stub_ajax 'GET', '/groups/1', expected
+  stub_ajax 'GET', '/groups/1',
+    group: {
+      id: 1
+      name: "Group One"
+      tweet_ids: [1, 2, 3, 4]
+    }
 
-#   Ember.run DSMCode, 'advanceReadiness'
+  expected =
+    tweets: [
+      { id: 1, content: "tweet one", group_id: 1 }
+      { id: 2, content: "tweet two", group_id: 1 }
+      { id: 3, content: "tweet three", group_id: 1 }
+      { id: 4, content: "tweet four", group_id: 1 }
+    ]
+  stub_ajax 'GET', /\/tweets/, expected
 
-#   visit('/group/1/').then ->
-#     for tweet, index in expected.tweets
-#       content = find(".tweets li:eq(#{index})").text()
-#       equal content, tweet.content, "'#{tweet.content}' != '#{content}'"
+  Ember.run DSMCode, 'advanceReadiness'
+
+  visit('/group/1/').then ->
+    for tweet, index in expected.tweets
+      content = find(".tweets li:eq(#{index})").text()
+      equal content, tweet.content, "'#{tweet.content}' != '#{content}'"
