@@ -5,7 +5,6 @@ module.exports = function(config) {
     files: [
         "src/lib/deps.min.js",
         "src/lib/app.min.js",
-        "src/lib/localdata.min.js",
         "src/lib/tmpl.min.js",
         "src/lib/tests.min.js"
     ],

@@ -8,7 +8,7 @@
         "grunt-contrib-connect": "*",
         "grunt-contrib-concat": "*",
         "grunt-contrib-coffee": "*",
-        "grunt-ember-template-compiler": "1.0.5"
+        "grunt-ember-template-compiler": "1.0.6"
     },
     "devDependencies": {
         "grunt-coffeelint": "*",

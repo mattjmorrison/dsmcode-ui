@@ -20,3 +20,5 @@ DSMCode.Group = DS.Model.extend
 DSMCode.Tweet = DS.Model.extend
   content: DS.attr 'string'
   group: DS.belongsTo 'DSMCode.Group'
+
+DSMCode.Store = DS.Store.extend()

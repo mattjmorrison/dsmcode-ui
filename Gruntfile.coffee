@@ -48,17 +48,17 @@ module.exports = (grunt) ->
         src: [
           'bower_components/jquery/jquery.min.js'
           'bower_components/handlebars/handlebars.js'
-          'bower_components/ember/ember.min.js'
-          'src/ember-data-0.13.min.js'
+          'bower_components/ember/ember.js'
+          'src/ember-data-0.13.js'
         ]
         dest: 'src/lib/deps.min.js'
       test:
         src: [
           'bower_components/jquery/jquery.min.js'
+          'bower_components/jquery-mockjax/jquery.mockjax.js'
           'bower_components/handlebars/handlebars.js'
           'bower_components/ember/ember.js'
-          'src/ember-data-0.13.min.js'
-          'bower_components/jquery-mockjax/jquery.mockjax.js'
+          'src/ember-data-0.13.js'
         ]
         dest: 'src/lib/deps.min.js'
 
