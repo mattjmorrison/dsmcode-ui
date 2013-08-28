@@ -19,6 +19,7 @@ jQuery.mockjax
       id: 1
       name: "Group One"
       tweet_ids: [1, 2]
+      post_ids: [1, 2]
 
 jQuery.mockjax
   type: 'GET'
@@ -30,6 +31,7 @@ jQuery.mockjax
       id: 2
       name: "Group Two"
       tweet_ids: [3, 4]
+      post_ids: [3, 4]
 
 jQuery.mockjax
   type: 'GET'
@@ -55,4 +57,30 @@ jQuery.mockjax
     tweets: [
       {id: 3, content: 'tweet three'}
       {id: 4, content: 'tweet four'}
+    ]
+
+jQuery.mockjax
+  type: 'GET'
+  url: '/posts'
+  data:
+    ids: [1, 2]
+  status: 200
+  dataType: 'json'
+  responseText:
+    posts: [
+      { id: 1, title: "message one" }
+      { id: 2, title: "message two" }
+    ]
+
+jQuery.mockjax
+  type: 'GET'
+  url: '/posts'
+  data:
+    ids: [3, 4]
+  status: 200
+  dataType: 'json'
+  responseText:
+    posts: [
+      { id: 3, title: "message three" }
+      { id: 4, title: "message four" }
     ]

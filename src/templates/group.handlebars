@@ -5,3 +5,9 @@
   <li>{{ tweet.content }}</li>
   {{/each}}
 </ul>
+
+<ul class="posts">
+  {{#each post in controller.posts }}
+  <li>{{ post.title }}</li>
+  {{/each}}
+</ul>

@@ -18,3 +18,11 @@ stub_ajax = (verb, url, json, status=200) ->
     status: status
     dataType: "json"
     responseText: json
+
+module 'DSMCodeTests',
+  setup: ->
+    Ember.run ->
+      DSMCode.reset()
+      DSMCode.deferReadiness()
+  teardown: ->
+    $.mockjaxClear()

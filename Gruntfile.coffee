@@ -30,7 +30,10 @@ module.exports = (grunt) ->
         files:
           'src/lib/app.min.js': 'src/*.coffee'
           'src/lib/localdata.min.js': 'local/*.coffee'
-          'src/lib/tests.min.js': 'tests/*.coffee'
+          'src/lib/tests.min.js': [
+             'tests/helper.coffee'
+             'tests/*tests.coffee'
+          ]
     emberhandlebars:
       compile:
         options:
