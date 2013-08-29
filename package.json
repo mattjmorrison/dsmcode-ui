@@ -8,6 +8,8 @@
         "grunt-contrib-connect": "*",
         "grunt-contrib-concat": "*",
         "grunt-contrib-coffee": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-clean": "*",
         "grunt-ember-template-compiler": "1.0.6"
     },
     "devDependencies": {
@@ -21,6 +23,6 @@
     },
     "scripts": {
         "postinstall": "bower install",
-        "test": "grunt travis"
+        "test": "grunt ci"
     }
 }

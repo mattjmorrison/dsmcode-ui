@@ -3,10 +3,10 @@ module.exports = function(config) {
     basePath: '.',
     frameworks: ['qunit'],
     files: [
-        "src/lib/deps.min.js",
-        "src/lib/app.min.js",
-        "src/lib/tmpl.min.js",
-        "src/lib/tests.min.js"
+        "build/deps*",
+        "build/dsmcode*",
+        "build/test_deps*",
+        "tests/build/*.js"
     ],
     port: 9876,
     runnerPort: 9100,
@@ -18,7 +18,7 @@ module.exports = function(config) {
     autoWatch: false,
     reporters: ['coverage', 'progress'],
     preprocessors: {
-        "**/lib/app.min.js": "coverage"
+        "build/dsmcode*.js": "coverage"
     },
     coverageReporter: {
         type: "lcov",
