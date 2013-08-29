@@ -28,7 +28,10 @@ module.exports = (grunt) ->
         bare: true
       compile:
         files:
-          'src/lib/app.min.js': 'src/*.coffee'
+          'src/lib/app.min.js': [
+            'src/*.coffee'
+            'src/**/*.coffee'
+          ]
           'src/lib/localdata.min.js': 'local/*.coffee'
           'src/lib/tests.min.js': [
              'tests/helper.coffee'
