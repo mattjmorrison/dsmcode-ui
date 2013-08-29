@@ -93,9 +93,12 @@ module.exports = (grunt) ->
         'build/tmpl.js'
       ]
 
+  grunt.task.registerTask 'test', ['buildtest', 'karma']
+  grunt.task.registerTask 'local', ['builddist', 'clean:local', 'concat:test', 'connect']
+  grunt.task.registerTask 'ci', ['test_coverage', 'test_uglified', 'coffeelint']
+
   grunt.task.registerTask 'basebuild', ['coffee', 'emberhandlebars', 'concat:dsmcode', 'concat:deps']
-  grunt.task.registerTask 'builddist', ['basebuild', 'uglify:deps', 'uglify:app']
-  grunt.task.registerTask 'buildtest', ['basebuild', 'concat:test']
-  grunt.task.registerTask 'test', ['clean:build', 'buildtest', 'karma']
-  grunt.task.registerTask 'local', ['clean:build', 'builddist', 'clean:local', 'concat:test', 'connect']
-  grunt.task.registerTask 'ci', ['clean', 'builddist', 'concat:test', 'clean:ci', 'karma', 'coffeelint', 'coveralls']
+  grunt.task.registerTask 'builddist', ['clean:build', 'basebuild', 'uglify:deps', 'uglify:app']
+  grunt.task.registerTask 'buildtest', ['clean:build', 'basebuild', 'concat:test']
+  grunt.task.registerTask 'test_uglified', ['clean', 'builddist', 'concat:test', 'clean:ci', 'karma']
+  grunt.task.registerTask 'test_coverage', ['test', 'coveralls']
