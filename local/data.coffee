@@ -18,6 +18,10 @@ jQuery.mockjax
     group:
       id: 1
       name: "Group One"
+      twitter_handle: 'group_one'
+      website: 'http://groupone.com'
+      facebook: 'http://facebook.com/groupone'
+      google_group: 'group_one'
       tweet_ids: [1, 2]
       post_ids: [1, 2]
 

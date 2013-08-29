@@ -1,5 +1,21 @@
 <h1>{{ controller.name }}</h1>
 
+{{#if controller.website}}
+<a {{bindAttr href="controller.website"}} class="website">Website</a>
+{{/if}}
+
+{{#if controller.twitter_handle}}
+<a {{bindAttr href="controller.twitter_url"}} class="twitter">{{ controller.twitter_handle }}</a>
+{{/if}}
+
+{{#if controller.google_group}}
+<a {{bindAttr href="controller.google_group_url"}} class="google-group">Google Group</a>
+{{/if}}
+
+{{#if controller.facebook}}
+  <a {{bindAttr href="controller.facebook"}} class="facebook">Facebook</a>
+{{/if}}
+
 <ul class="tweets">
   {{#each tweet in controller.tweets }}
   <li>{{ tweet.content }}</li>
