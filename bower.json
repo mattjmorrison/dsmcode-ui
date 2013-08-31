@@ -4,6 +4,7 @@
   "dependencies": {
     "handlebars": "~1.0.0",
     "ember": "1.0.0-rc.8",
+    "ember-data-shim": "0.0.13",
     "jquery-mockjax": "*",
     "bootstrap": "~2.3.2"
   }

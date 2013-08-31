@@ -47,7 +47,7 @@ module.exports = (grunt) ->
           'bower_components/jquery/jquery.min.js'
           'bower_components/handlebars/handlebars.js'
           'bower_components/ember/ember.js'
-          'src/ember-data-0.13.min.js'
+          'bower_components/ember-data-shim/ember-data.js'
           'bower_components/bootstrap/js/bootstrap-collapse.js'
           'bower_components/bootstrap/js/bootstrap-dropdown.js'
         ]
