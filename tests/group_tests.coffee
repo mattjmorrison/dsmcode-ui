@@ -34,7 +34,7 @@ test "shows group twitter handle and url", ->
 
   visit('/group/1/').then ->
     text = find(".twitter[href*='http://twitter.com/group_one']").text()
-    equal text, "group_one", "'#{text}' was twitter link text"
+    equal text, "Twitter", "'#{text}' was twitter link text"
 
 test "does not show twitter link when not configured", ->
   stub_ajax 'GET', '/groups', []

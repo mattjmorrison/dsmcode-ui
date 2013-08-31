@@ -21,5 +21,5 @@ test "shows tweets on group details page", ->
 
   visit('/group/1/').then ->
     for tweet, index in expected
-      content = find(".tweets li:eq(#{index})").text()
+      content = find(".tweets td:eq(#{index})").text()
       equal content, tweet.content, "'#{tweet.content}' != '#{content}'"

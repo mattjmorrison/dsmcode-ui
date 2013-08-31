@@ -1,13 +1,4 @@
 module.exports = (grunt) ->
-  grunt.loadNpmTasks 'grunt-coffeelint'
-  grunt.loadNpmTasks 'grunt-contrib-connect'
-  grunt.loadNpmTasks 'grunt-contrib-concat'
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-uglify'
-  grunt.loadNpmTasks 'grunt-contrib-clean'
-  grunt.loadNpmTasks 'grunt-ember-template-compiler'
-  grunt.loadNpmTasks 'grunt-karma-coveralls'
-  grunt.loadNpmTasks 'grunt-karma'
 
   grunt.initConfig
     karma:
@@ -33,7 +24,7 @@ module.exports = (grunt) ->
             'src/*.coffee'
             'src/**/*.coffee'
           ]
-          'build/localdata.js': 'local/*.coffee'
+          'build/localdata.js': 'local/fixture_data.coffee'
           'tests/build/tests.js': [
              'tests/helper.coffee'
              'tests/*tests.coffee'
@@ -57,6 +48,8 @@ module.exports = (grunt) ->
           'bower_components/handlebars/handlebars.js'
           'bower_components/ember/ember.js'
           'src/ember-data-0.13.min.js'
+          'bower_components/bootstrap/js/bootstrap-collapse.js'
+          'bower_components/bootstrap/js/bootstrap-dropdown.js'
         ]
         dest: 'build/deps.js'
       dsmcode:
@@ -92,9 +85,29 @@ module.exports = (grunt) ->
         'build/localdata.js',
         'build/tmpl.js'
       ]
+    recess:
+      options:
+        compile: true
+      bootstrap:
+        src: [
+          'bower_components/bootstrap/less/bootstrap.less'
+          'bower_components/bootstrap/less/responsive.less'
+        ]
+        dest: 'build/css/bootstrap-responsive.min.css'
+
+  grunt.loadNpmTasks 'grunt-coffeelint'
+  grunt.loadNpmTasks 'grunt-contrib-connect'
+  grunt.loadNpmTasks 'grunt-contrib-concat'
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks 'grunt-contrib-uglify'
+  grunt.loadNpmTasks 'grunt-contrib-clean'
+  grunt.loadNpmTasks 'grunt-ember-template-compiler'
+  grunt.loadNpmTasks 'grunt-karma-coveralls'
+  grunt.loadNpmTasks 'grunt-karma'
+  grunt.loadNpmTasks 'grunt-recess'
 
   grunt.task.registerTask 'test', ['buildtest', 'karma']
-  grunt.task.registerTask 'local', ['builddist', 'clean:local', 'concat:test', 'connect']
+  grunt.task.registerTask 'local', ['builddist', 'clean:local', 'concat:test', 'recess:bootstrap', 'connect']
   grunt.task.registerTask 'ci', ['test_coverage', 'test_uglified', 'coffeelint']
 
   grunt.task.registerTask 'basebuild', ['coffee', 'emberhandlebars', 'concat:dsmcode', 'concat:deps']

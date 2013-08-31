@@ -1,29 +1,45 @@
-<h1>{{ controller.name }}</h1>
+<div class="well">
+  <h1>{{ controller.name }}</h1>
 
-{{#if controller.website}}
-<a {{bindAttr href="controller.website"}} class="website">Website</a>
-{{/if}}
+  <ul class="nav nav-pills">
+    {{#if controller.website}}
+      <li><a {{bindAttr href="controller.website"}} class="website">Website</a></li>
+    {{/if}}
 
-{{#if controller.twitter_handle}}
-<a {{bindAttr href="controller.twitter_url"}} class="twitter">{{ controller.twitter_handle }}</a>
-{{/if}}
+    {{#if controller.twitter_handle}}
+      <li><a {{bindAttr href="controller.twitter_url"}} class="twitter">Twitter</a></li>
+    {{/if}}
 
-{{#if controller.google_group}}
-<a {{bindAttr href="controller.google_group_url"}} class="google-group">Google Group</a>
-{{/if}}
+    {{#if controller.google_group}}
+      <li><a {{bindAttr href="controller.google_group_url"}} class="google-group">Google Group</a></li>
+    {{/if}}
 
-{{#if controller.facebook}}
-  <a {{bindAttr href="controller.facebook"}} class="facebook">Facebook</a>
-{{/if}}
+    {{#if controller.facebook}}
+      <li><a {{bindAttr href="controller.facebook"}} class="facebook">Facebook</a></li>
+    {{/if}}
+  </ul>
+</div>
 
-<ul class="tweets">
-  {{#each tweet in controller.tweets }}
-  <li>{{ tweet.content }}</li>
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="span6">
+    <h2>Recent Tweets</h2>
+    <table class="tweets table table-hover">
+      {{#each tweet in controller.tweets }}
+      <tr>
+        <td>{{ tweet.content }}</td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+  <div class="span6">
+    <h2>Recent Posts</h2>
+    <table class="table table-hover posts">
+      {{#each post in controller.posts }}
+      <tr>
+        <td>{{ post.title }}</td>
+      </tr>
+      {{/each}}
+    </table>
+  </div>
+</div>
 
-<ul class="posts">
-  {{#each post in controller.posts }}
-  <li>{{ post.title }}</li>
-  {{/each}}
-</ul>

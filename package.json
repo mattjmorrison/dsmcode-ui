@@ -5,6 +5,7 @@
         "coffee-script": "*",
         "bower": "~1.2.3",
         "grunt-cli": "*",
+        "grunt-recess": "*",
         "grunt-contrib-connect": "*",
         "grunt-contrib-concat": "*",
         "grunt-contrib-coffee": "*",

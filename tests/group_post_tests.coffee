@@ -29,5 +29,5 @@ test "shows 10 most recent messages from the mailing list on group details page"
   visit('/group/1/').then ->
     for post, index in expected
       if index < 10
-        content = find(".posts li:eq(#{index})").text()
+        content = find(".posts td:eq(#{index})").text()
         equal content, post.title, "'#{content}' != '#{post.title}'"

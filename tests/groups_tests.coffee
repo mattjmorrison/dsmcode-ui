@@ -21,7 +21,25 @@ test "shows correct title", ->
   Ember.run DSMCode, 'advanceReadiness'
 
   visit('/').then ->
-    value = find('h1').text()
-    equal value, 'DesMoinesCode.com', "'#{value}' is wrong"
+    value = find('.brand').text()
+    equal value, 'Des Moines Code', "'#{value}' is wrong"
     value = find('.groups li:eq(0)').text()
     equal value, '', "Element should not have existed but was '#{value}'"
+
+test "has links to each group", ->
+  stub_ajax 'GET', '/groups',
+    groups: [
+      { id: 1, name: "Group One", }
+      { id: 2, name: "Group Two", }
+    ]
+
+  Ember.run DSMCode, 'advanceReadiness'
+
+  visit('/').then ->
+    equal 2, find('.group-link').length, "Missing group links"
+
+    group_one_text = find('.group-link[href*="/group/1"]').text()
+    equal "Group One", group_one_text, "Group One link text missing, found '#{group_one_text}'"
+
+    group_two_text = find('.group-link[href*="/group/2"]').text()
+    equal "Group Two", group_two_text, "Group Two link text missing, found '#{group_two_text}'"
