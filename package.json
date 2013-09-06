@@ -15,7 +15,7 @@
     },
     "devDependencies": {
         "grunt-coffeelint": "*",
-        "grunt-karma-coveralls": "~1.0.0",
+        "grunt-karma-coveralls": "~1.0.1",
         "grunt-karma": "0.7.0",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
