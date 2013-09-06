@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/desmoinescode/dsmcode-ui.png?branch=master)](https://travis-ci.org/desmoinescode/dsmcode-ui)
-[![Coverage Status](https://coveralls.io/repos/desmoinescode/dsmcode-api/badge.png)](https://coveralls.io/r/desmoinescode/dsmcode-api)
+[![Coverage Status](https://coveralls.io/repos/desmoinescode/dsmcode-ui/badge.png)](https://coveralls.io/r/desmoinescode/dsmcode-ui)
 [![Dependency Status](https://gemnasium.com/desmoinescode/dsmcode-ui.png)](https://gemnasium.com/desmoinescode/dsmcode-ui)
 
 # Environment Setup

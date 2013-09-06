@@ -6,7 +6,7 @@ module.exports = (grunt) ->
         configFile: 'karma.conf.js'
     coveralls:
       options:
-        repo_token: 'nqyseqTpGOz9NFjRATCqx3N4VCcSGsvCk'
+        repo_token: 'Lo4J7UZ685Mn6HkgO1AqnWXmI3vlJqTOS'
         service_name: 'travis-ci'
         coverage_dir: 'coverage'
     connect:
