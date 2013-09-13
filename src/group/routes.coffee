@@ -1,9 +1,9 @@
 
 DSMCode.GroupsRoute = Ember.Route.extend
   model: ->
-    DSMCode.Group.find()
+    @store.find('group')
 
 
 DSMCode.GroupRoute = Ember.Route.extend
   model: (params) ->
-    DSMCode.Group.find(params.id)
+    @store.find('group', params.id)

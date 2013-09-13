@@ -1,13 +1,26 @@
+group_one =
+  id: 1
+  name: "Group One"
+  twitter_handle: 'group_one'
+  website: 'http://groupone.com'
+  facebook: 'http://facebook.com/groupone'
+  google_group: 'group_one'
+  tweets: [1, 2]
+  posts: [1, 2]
+
+group_two =
+  id: 2
+  name: "Group Two"
+  tweets: [3, 4]
+  posts: [3, 4]
+
 jQuery.mockjax
   type: 'GET'
   url: '/groups'
   status: 200
   dataType: 'json'
   responseText:
-    groups: [
-      { id: 1, name: "Group One" }
-      { id: 2, name: "Group Two" }
-    ]
+    groups: [ group_one, group_two ]
 
 jQuery.mockjax
   type: 'GET'
@@ -15,15 +28,7 @@ jQuery.mockjax
   status: 200
   dataType: 'json'
   responseText:
-    group:
-      id: 1
-      name: "Group One"
-      twitter_handle: 'group_one'
-      website: 'http://groupone.com'
-      facebook: 'http://facebook.com/groupone'
-      google_group: 'group_one'
-      tweet_ids: [1, 2]
-      post_ids: [1, 2]
+    group_one
 
 jQuery.mockjax
   type: 'GET'
@@ -31,11 +36,7 @@ jQuery.mockjax
   status: 200
   dataType: 'json'
   responseText:
-    group:
-      id: 2
-      name: "Group Two"
-      tweet_ids: [3, 4]
-      post_ids: [3, 4]
+    group_two
 
 jQuery.mockjax
   type: 'GET'

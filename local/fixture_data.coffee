@@ -1,5 +1,4 @@
-DSMCode.Store = DS.Store.extend
-  adapter: 'DS.FixtureAdapter'
+DSMCode.ApplicationAdapter = DS.FixtureAdapter
 
 DSMCode.Group.FIXTURES = [
   {

@@ -1,12 +1,15 @@
 test "shows 10 most recent messages from the mailing list on group details page", ->
-
-  stub_ajax 'GET', '/groups', []
-  stub_ajax 'GET', '/groups/1',
-    group: {
+  group_one = 
+    group:
       id: 1
       name: "Group One"
-      post_ids: [1..10]
-    }
+      posts: [1..10]
+
+  stub_ajax 'GET', '/groups', 
+    groups: [
+      group_one
+    ]
+  stub_ajax 'GET', '/groups/1', group_one
 
   expected = [
     { id: 1, title: "message one" }
@@ -21,7 +24,7 @@ test "shows 10 most recent messages from the mailing list on group details page"
     { id: 10, title: "message ten" }
     { id: 11, title: "message eleven" }
   ]
-  stub_ajax 'GET', /\/posts/,
+  stub_ajax 'GET', '/posts',
     posts: expected
 
   Ember.run DSMCode, 'advanceReadiness'

@@ -1,12 +1,12 @@
 test "shows tweets on group details page", ->
-
-  stub_ajax 'GET', '/groups', []
-  stub_ajax 'GET', '/groups/1',
-    group: {
+  group_one =
+    group:
       id: 1
       name: "Group One"
-      tweet_ids: [1, 2, 3, 4]
-    }
+      tweets: [1, 2, 3, 4]
+
+  stub_ajax 'GET', '/groups', groups: [ group_one ]
+  stub_ajax 'GET', '/groups/1', group_one
 
   expected = [
     { id: 1, content: "tweet one", group_id: 1 }
@@ -14,7 +14,7 @@ test "shows tweets on group details page", ->
     { id: 3, content: "tweet three", group_id: 1 }
     { id: 4, content: "tweet four", group_id: 1 }
   ]
-  stub_ajax 'GET', /\/tweets/,
+  stub_ajax 'GET', '/tweets',
     tweets: expected
 
   Ember.run DSMCode, 'advanceReadiness'
