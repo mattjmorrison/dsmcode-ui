@@ -12,7 +12,6 @@
         "grunt-contrib-uglify": "*",
         "grunt-contrib-clean": "*",
         "grunt-ember-template-compiler": "1.0.6",
-        "load-grunt-tasks": "*",
         "load-grunt-config": "*"
     },
     "devDependencies": {
