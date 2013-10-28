@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "dependencies": {
         "coffee-script": "*",
-        "bower": "~1.2.3",
+        "bower": "~1.2.7",
         "grunt-cli": "*",
         "grunt-recess": "*",
         "grunt-contrib-connect": "*",
@@ -11,7 +11,7 @@
         "grunt-contrib-coffee": "*",
         "grunt-contrib-uglify": "*",
         "grunt-contrib-clean": "*",
-        "grunt-ember-template-compiler": "1.0.6",
+        "grunt-ember-template-compiler": "1.1.2",
         "load-grunt-config": "*"
     },
     "devDependencies": {
