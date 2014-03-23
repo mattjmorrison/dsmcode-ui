@@ -5,4 +5,4 @@ module.exports =
         newSource = sourceFile.replace 'src/templates/', ''
         newSource.replace '.handlebars', ''
     files: ['src/templates/*.handlebars']
-    dest: 'build/tmpl.js'
+    dest: 'build/tmp/templates.js'

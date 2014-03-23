@@ -1,4 +1,3 @@
-
 DSMCode.Group = DS.Model.extend
   name: DS.attr 'string'
   website: DS.attr 'string'

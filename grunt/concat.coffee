@@ -1,20 +1,31 @@
 module.exports =
-  deps:
-    src: [
-      'bower_components/jquery/jquery.min.js'
-      'bower_components/handlebars/handlebars.js'
-      'bower_components/ember/ember.js'
-      'bower_components/ember-data-shim/ember-data.js'
-      'bower_components/bootstrap/js/bootstrap-collapse.js'
-      'bower_components/bootstrap/js/bootstrap-dropdown.js'
-    ]
-    dest: 'build/deps.js'
-  dsmcode:
-    src: [
-      'build/app.js'
-      'build/tmpl.js'
-    ]
-    dest: 'build/dsmcode.js'
+  app:
+    files:
+      'build/tmp/deps.js': [
+        'bower_components/jquery/jquery.min.js'
+        'bower_components/handlebars/handlebars.js'
+        'bower_components/ember/ember.js'
+        'bower_components/ember-data/ember-data.min.js'
+        'bower_components/bootstrap/js/collapse.js'
+        'bower_components/bootstrap/js/dropdown.js'
+      ]
+      'build/tmp/dsmcode.js': ['build/tmp/app.js', 'build/tmp/templates.js']
+      'build/app.js': ['build/tmp/deps.js', 'build/tmp/dsmcode.js']
   test:
-    src: ['bower_components/jquery-mockjax/jquery.mockjax.js']
-    dest: 'build/test_deps.js'
+    files:
+      'build/test/deps.js': [
+        'build/tmp/deps.js'
+        'bower_components/jquery-mockjax/jquery.mockjax.js'
+      ]
+      'build/test/app.js': [
+        'build/tmp/dsmcode.js'
+      ]
+      'build/test/tests.js': [
+        'build/tmp/tests.js'
+      ]
+  mock:
+    src: ['build/app.js', 'build/tmp/mocks.js']
+    dest: 'build/demo/mocked_app.js'
+  fixture:
+    src: ['build/app.js', 'build/tmp/fixtures.js']
+    dest: 'build/demo/fixture_app.js'

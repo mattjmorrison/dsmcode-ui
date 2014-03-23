@@ -1,19 +1,13 @@
 module.exports =
   build: [
     'build'
-    'tests/build'
     'coverage'
   ]
-  local: [
-    'build/app.js'
-    'build/deps.js'
-    'build/dsmcode.js'
-    'build/tmpl.js'
+  all: [
+    'bower_components'
+    'node_modules'
+    'build'
+    'coverage'
   ]
-  ci: [
-    'build/app.js'
-    'build/deps.js'
-    'build/dsmcode.js'
-    'build/localdata.js'
-    'build/tmpl.js'
-  ]
+
+

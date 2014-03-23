@@ -3,12 +3,12 @@ module.exports =
     bare: true
   compile:
     files:
-      'build/app.js': [
-        'src/*.coffee',
+      'build/tmp/app.js': [
         'src/**/*.coffee'
       ],
-      'build/localdata.js': 'local/fixture_data.coffee',
-      'tests/build/tests.js': [
+      'build/tmp/fixtures.js': 'local/fixture_data.coffee',
+      'build/tmp/mocks.js': 'local/mock_data.coffee',
+      'build/tmp/tests.js': [
          'tests/helper.coffee',
          'tests/*tests.coffee'
       ]

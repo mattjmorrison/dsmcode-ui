@@ -1,7 +1,7 @@
 module.exports =
   app:
-    src: ['build/dsmcode.js']
-    dest: 'build/dsmcode.min.js'
-  deps:
-    src: ['build/deps.js']
-    dest: 'build/deps.min.js'
+    src: ['build/app.js']
+    dest: 'build/app.min.js'
+  demo:
+    src: ['build/demo/fixture_app.js']
+    dest: 'build/demo/fixture_app.min.js'

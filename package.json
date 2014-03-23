@@ -5,7 +5,9 @@
         "coffee-script": "*",
         "bower": "~1.2.7",
         "grunt-cli": "*",
-        "grunt-recess": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-less": "*",
         "grunt-contrib-connect": "*",
         "grunt-contrib-concat": "*",
         "grunt-contrib-coffee": "*",
@@ -17,7 +19,7 @@
     "devDependencies": {
         "grunt-coffeelint": "*",
         "grunt-karma-coveralls": "~2.2.0",
-        "grunt-karma": "0.7.0",
+        "grunt-karma": "~0.8.0",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
         "karma-qunit": "*",
@@ -25,6 +27,6 @@
     },
     "scripts": {
         "postinstall": "bower install",
-        "test": "grunt ci"
+        "test": "grunt test:ci"
     }
 }

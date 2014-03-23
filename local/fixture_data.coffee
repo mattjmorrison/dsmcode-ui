@@ -26,8 +26,8 @@ DSMCode.Group.FIXTURES = [
 DSMCode.Tweet.FIXTURES = [
   { id: 1, content: 'hello world' }
   { id: 2, content: 'hello again' }
-  { id: 3, content: 'my hello again' }
-  { id: 4, content: 'my hello again' }
+  { id: 3, content: 'my hello again 1' }
+  { id: 4, content: 'my hello again 2' }
 ]
 
 DSMCode.Post.FIXTURES = [
