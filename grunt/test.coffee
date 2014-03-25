@@ -2,9 +2,7 @@ module.exports = (grunt) ->
 
   grunt.task.registerTask 'test:base', [
     'clean:build'
-    'coffee'
-    'emberhandlebars'
-    'concat:app'
+    'app'
     'concat:test'
   ]
 

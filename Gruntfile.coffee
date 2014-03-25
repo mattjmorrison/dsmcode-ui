@@ -1,9 +1,10 @@
 module.exports = (grunt) ->
 
   grunt.initConfig require("load-grunt-config")(grunt)
+  grunt.loadNpmTasks('grunt-es6-module-transpiler')
 
   grunt.task.registerTask 'build:demo', [
-    'clean:build', 'app', 'style', 'concat:fixture', 'uglify:demo'
+    'clean:build', 'app', 'style', 'concat:fixture', # 'uglify:demo'
   ]
 
   grunt.task.registerTask 'build:prod', [

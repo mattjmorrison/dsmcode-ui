@@ -1,2 +1,2 @@
 module.exports =
-  app: ["src/*.coffee"]
+  app: ["app/**/*.coffee"]

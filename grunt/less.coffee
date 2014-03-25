@@ -3,5 +3,5 @@ module.exports =
     options:
       paths: ["bower_components/bootstrap/less"]
     files: [
-      'build/tmp/style.css': 'src/less/*.less'
+      'build/tmp/style.css': 'app/less/*.less'
     ]

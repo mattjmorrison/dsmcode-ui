@@ -7,6 +7,11 @@
 </head>
 <body>
   <div id="ember-app"></div>
-  <script type="text/javascript" src="build/demo/fixture_app.min.js"></script>
+  <script type="text/javascript" src="build/demo/fixture_app.js"></script>
+  <script>
+   (function(){
+      window.App = require('dsmcode/demo')['default'];
+    })();
+  </script>
 </body>
 </html>

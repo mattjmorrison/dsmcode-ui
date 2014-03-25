@@ -4,7 +4,7 @@ module.exports =
     livereload: true
   sources:
     files: [
-      'src/**'
+      'app/**'
       'index.html'
       'Gruntfile.coffee'
       'grunt/*.coffee'

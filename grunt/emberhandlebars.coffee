@@ -2,7 +2,7 @@ module.exports =
   compile:
     options:
       templateName: (sourceFile) ->
-        newSource = sourceFile.replace 'src/templates/', ''
+        newSource = sourceFile.replace 'app/templates/', ''
         newSource.replace '.handlebars', ''
-    files: ['src/templates/*.handlebars']
+    files: ['app/templates/*.handlebars']
     dest: 'build/tmp/templates.js'

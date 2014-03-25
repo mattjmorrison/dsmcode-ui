@@ -1,9 +1,10 @@
 {
     "name": "dsmcode-ui",
+    "namespace": "dsmcode",
     "version": "1.0.0",
     "dependencies": {
         "coffee-script": "*",
-        "bower": "~1.2.7",
+        "bower": "*",
         "grunt-cli": "*",
         "grunt-contrib-watch": "*",
         "grunt-contrib-cssmin": "*",
@@ -13,13 +14,14 @@
         "grunt-contrib-coffee": "*",
         "grunt-contrib-uglify": "*",
         "grunt-contrib-clean": "*",
-        "grunt-ember-template-compiler": "~>1.2.0",
+        "grunt-es6-module-transpiler": "*",
+        "grunt-ember-template-compiler": "*",
         "load-grunt-config": "*"
     },
     "devDependencies": {
         "grunt-coffeelint": "*",
-        "grunt-karma-coveralls": "~2.2.0",
-        "grunt-karma": "~0.8.0",
+        "grunt-karma-coveralls": "*",
+        "grunt-karma": "*",
         "karma-phantomjs-launcher": "*",
         "karma-chrome-launcher": "*",
         "karma-qunit": "*",

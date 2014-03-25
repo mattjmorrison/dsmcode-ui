@@ -9,7 +9,12 @@ module.exports =
         'bower_components/bootstrap/js/collapse.js'
         'bower_components/bootstrap/js/dropdown.js'
       ]
-      'build/tmp/dsmcode.js': ['build/tmp/app.js', 'build/tmp/templates.js']
+      'build/tmp/dsmcode.js': [
+        'loader.js'
+        'ember-resolver.js'
+        'build/tmp/transpiled/**/*.js'
+        'build/tmp/templates.js'
+      ]
       'build/app.js': ['build/tmp/deps.js', 'build/tmp/dsmcode.js']
   test:
     files:

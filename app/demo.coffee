@@ -1,7 +1,11 @@
+`import DSMCode from 'dsmcode/app';`
+`import Adapter from 'dsmcode/adapters/fixture';`
 `import Group from 'dsmcode/models/group';`
-`import Tweet from 'dsmcode/models/tweet';`
 `import Post from 'dsmcode/models/post';`
+`import Tweet from 'dsmcode/models/tweet';`
 
+App = DSMCode.create()
+App.ApplicationAdapter = Adapter
 
 Group.FIXTURES = [
   {
@@ -26,6 +30,12 @@ Group.FIXTURES = [
   }
 ]
 
+Post.FIXTURES = [
+  { id: 1, title: 'first post' }
+  { id: 2, title: 'second post' }
+  { id: 3, title: 'my first post' }
+  { id: 4, title: 'my second post' }
+]
 
 Tweet.FIXTURES = [
   { id: 1, content: 'hello world' }
@@ -34,10 +44,4 @@ Tweet.FIXTURES = [
   { id: 4, content: 'my hello again 2' }
 ]
 
-
-Post.FIXTURES = [
-  { id: 1, title: 'first post' }
-  { id: 2, title: 'second post' }
-  { id: 3, title: 'my first post' }
-  { id: 4, title: 'my second post' }
-]
+`export default App;`
