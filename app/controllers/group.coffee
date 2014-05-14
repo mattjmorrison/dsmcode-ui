@@ -1,3 +1,5 @@
+`import ObjectController from 'ember'`
+
 GroupController = Ember.ObjectController.extend
   twitter_url: Ember.computed(->
     "http://twitter.com/#{@get('twitter_handle')}"

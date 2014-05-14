@@ -32,5 +32,5 @@ module.exports =
     src: ['build/app.js', 'build/tmp/mocks.js']
     dest: 'build/demo/mocked_app.js'
   fixture:
-    src: ['build/app.js', 'build/tmp/fixtures.js']
+    src: ['build/app.js', 'build/tmp/transpiled/adapters/fixtures.js']
     dest: 'build/demo/fixture_app.js'

@@ -3,7 +3,7 @@ module.exports =
     bare: true
   glob_to_multiple:
     expand: true
-    src: ['app/**/*.coffee']
+    src: ['app/**/*.coffee', 'tests/*.coffee']
     dest: 'build/tmp/es6'
     ext: '.js'
   # options:

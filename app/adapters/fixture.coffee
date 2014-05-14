@@ -1,3 +1,5 @@
-Adapter = DS.FixtureAdapter.extend()
+`import FixtureAdapter from 'ember-data/fixture_adapter'`
 
-`export default Adapter;`
+Adapter = FixtureAdapter.extend()
+
+`export default Adapter`

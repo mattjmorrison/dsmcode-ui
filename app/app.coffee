@@ -1,6 +1,7 @@
 `import Resolver from 'ember/resolver';`
+`import Ember from 'ember'`
 
-DSMCode = Ember.Application.extend
+DSMCode = Application.extend
   rootElement: '#ember-app'
   Resolver: Resolver
   modulePrefix: 'dsmcode'
